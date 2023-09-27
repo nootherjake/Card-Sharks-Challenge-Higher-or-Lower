@@ -1,10 +1,7 @@
 # Card-Sharks-Challenge-Higher-or-Lower
 The purpose of this project is to learn how to interact with iOS mobile application and build input/output for the screen.  This will be a game similar to Card Sharks where the user will guess higher or lower for the next card and will receive points or be deducted points if they are right or wrong.
 
-###Rules of the Game
-# This is a first-level heading
-## This is a second-level heading
-### This is a third-level heading
+### Rules of the Game heading
 
 At the beginning of the game, the player will be presented with a card.
 The player will then guess if the next card is Higher or Lower than the current card shown.
