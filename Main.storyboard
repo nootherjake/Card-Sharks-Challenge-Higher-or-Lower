@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iff-h7-f7a">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HighLow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uIO-xy-0JS">
+                                <rect key="frame" x="-20" y="-20" width="433" height="892"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green_background" translatesAutoresizingMaskIntoConstraints="NO" id="Uij-zb-HNe">
+                                        <rect key="frame" x="20" y="20" width="393" height="852"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_1_1" translatesAutoresizingMaskIntoConstraints="NO" id="hnu-Iz-LcT">
+                                <rect key="frame" x="25" y="334" width="343" height="253"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqf-xI-h7e">
+                                <rect key="frame" x="131" y="166" width="131" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="high"/>
+                                <connections>
+                                    <action selector="buttonHighTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1LV-dr-kiL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CsS-HT-uBa">
+                                <rect key="frame" x="124" y="757" width="144" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Higher or Lower?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TH-ea-1ie">
+                                <rect key="frame" x="16" y="59" width="361" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0P-mA-47I">
+                                <rect key="frame" x="131" y="575" width="131" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="low"/>
+                                <connections>
+                                    <action selector="buttonLowTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bMn-nh-BmM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="r6T-qH-Mwa"/>
+                    <connections>
+                        <outlet property="imgCard" destination="hnu-Iz-LcT" id="LZE-rf-3WP"/>
+                        <outlet property="lblScore" destination="CsS-HT-uBa" id="cnR-6U-EDq"/>
+                        <segue destination="qAn-mo-LOv" kind="show" identifier="winningSegue" id="PXa-Le-Pqa"/>
+                        <segue destination="rRT-Bz-gZp" kind="show" identifier="losingSegue" id="XKr-x0-LEG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="-1082"/>
+        </scene>
+        <!--WinningViewController-->
+        <scene sceneID="RYD-Dr-zDz">
+            <objects>
+                <viewController title="WinningViewController" id="qAn-mo-LOv" customClass="ViewController" customModule="HighLow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wTx-Jp-TRO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="green_background" translatesAutoresizingMaskIntoConstraints="NO" id="Uci-sp-2qe">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLj-kP-UKD">
+                                <rect key="frame" x="78" y="72" width="237" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Congratulations!">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="32" name="MarkerFelt-Wide"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9M-ZG-979">
+                                <rect key="frame" x="105" y="259" width="182" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You won Jeff!">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="30" name="MarkerFelt-Wide"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNi-gy-Wlj">
+                                <rect key="frame" x="105" y="454" width="181" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Play Again">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Helvetica"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Qtu-3f-xOx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JL2-M7-gG3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="Uci-sp-2qe" secondAttribute="bottom" id="0jh-uB-05z"/>
+                            <constraint firstItem="Uci-sp-2qe" firstAttribute="top" secondItem="JL2-M7-gG3" secondAttribute="top" id="8Jc-64-KVc"/>
+                            <constraint firstItem="Uci-sp-2qe" firstAttribute="leading" secondItem="JL2-M7-gG3" secondAttribute="leading" id="Pnp-fL-KA9"/>
+                            <constraint firstItem="Uci-sp-2qe" firstAttribute="trailing" secondItem="JL2-M7-gG3" secondAttribute="trailing" id="bHe-UZ-GJ0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xML-iJ-BAr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Au-dU-gsA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-286.25954198473283" y="-1775.3521126760563"/>
+        </scene>
+        <!--LosingViewController-->
+        <scene sceneID="phf-lD-wWq">
+            <objects>
+                <viewController title="LosingViewController" id="rRT-Bz-gZp" customClass="ViewController" customModule="HighLow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mqw-Ip-rwW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="green_background" translatesAutoresizingMaskIntoConstraints="NO" id="Rt9-IT-Gu7">
+                                <rect key="frame" x="0.0" y="-9" width="393" height="870"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVJ-pX-GeU">
+                                <rect key="frame" x="26" y="242" width="341" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="341" id="8OI-ft-tnr"/>
+                                    <constraint firstAttribute="height" constant="59" id="wsp-vR-wQs"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Better luck next time.">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="27" name="MarkerFelt-Wide"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dv-xX-4sC">
+                                <rect key="frame" x="101" y="458" width="176" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="vY0-rG-Hvp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Try Again">
+                                            <attributes>
+                                                <font key="NSFont" size="25" name="Helvetica"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="9PE-oa-En9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM5-aA-qyD">
+                                <rect key="frame" x="47" y="98" width="316.33333333333331" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="cIW-Na-9sO"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Did you just lose Jeff?">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="33" name="MarkerFelt-Wide"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c9o-pP-OiK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c9o-pP-OiK" firstAttribute="trailing" secondItem="CM5-aA-qyD" secondAttribute="trailing" constant="29.666666666666686" id="3VG-aK-ivK"/>
+                            <constraint firstItem="CM5-aA-qyD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c9o-pP-OiK" secondAttribute="leading" id="AqZ-MV-Jcc"/>
+                            <constraint firstItem="yVJ-pX-GeU" firstAttribute="top" secondItem="Mqw-Ip-rwW" secondAttribute="top" constant="242" id="R0L-7N-vlo"/>
+                            <constraint firstItem="Rt9-IT-Gu7" firstAttribute="centerY" secondItem="Mqw-Ip-rwW" secondAttribute="centerY" id="RKe-sF-oJS"/>
+                            <constraint firstItem="CM5-aA-qyD" firstAttribute="top" secondItem="c9o-pP-OiK" secondAttribute="top" constant="39" id="YTX-R0-qZB"/>
+                            <constraint firstItem="Rt9-IT-Gu7" firstAttribute="top" secondItem="Mqw-Ip-rwW" secondAttribute="topMargin" constant="-68" id="ZJk-aa-Kmw"/>
+                            <constraint firstItem="c9o-pP-OiK" firstAttribute="bottom" secondItem="1dv-xX-4sC" secondAttribute="bottom" constant="299" id="brk-G2-0lz"/>
+                            <constraint firstItem="c9o-pP-OiK" firstAttribute="trailing" secondItem="1dv-xX-4sC" secondAttribute="trailing" constant="116" id="cDu-XL-ROj"/>
+                            <constraint firstItem="1dv-xX-4sC" firstAttribute="leading" secondItem="c9o-pP-OiK" secondAttribute="leading" constant="101" id="mXV-7z-0zp"/>
+                            <constraint firstItem="yVJ-pX-GeU" firstAttribute="centerX" secondItem="Mqw-Ip-rwW" secondAttribute="centerX" id="nfm-VO-Xff"/>
+                            <constraint firstItem="yVJ-pX-GeU" firstAttribute="leading" secondItem="c9o-pP-OiK" secondAttribute="leading" constant="26" id="qZG-Y6-jih"/>
+                            <constraint firstItem="Rt9-IT-Gu7" firstAttribute="leading" secondItem="Mqw-Ip-rwW" secondAttribute="leading" id="yae-ef-q56"/>
+                            <constraint firstItem="yVJ-pX-GeU" firstAttribute="centerX" secondItem="Rt9-IT-Gu7" secondAttribute="centerX" id="yzJ-Qa-Ddf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6W5-w6-cUJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FwB-yd-R9E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-286" y="-301"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r12-Ag-yG1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="iff-h7-f7a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="X9x-rI-kho"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qwI-lo-CP0">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Z4b-c5-elY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfE-XQ-ToU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-286" y="-1082"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Z4b-c5-elY"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="card_1_1" width="100" height="143.33332824707031"/>
+        <image name="green_background" width="113" height="169.66667175292969"/>
+        <image name="high" width="106.66666412353516" height="151.33332824707031"/>
+        <image name="low" width="106.66666412353516" height="151.33332824707031"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
