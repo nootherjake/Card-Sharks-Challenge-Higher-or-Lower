@@ -1,0 +1,98 @@
+
+//
+//  ViewController.swift
+//  HighLow
+//
+//  Created by Jake Adebayo on 9/19/23.
+//
+
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var imgCard: UIImageView!
+    @IBOutlet weak var lblScore: UILabel!
+
+    var score: Int = 0
+    var currentCardNumber = 0
+    var previousCardNumber = 0
+    var guessedCardCount: Int = 0 // Track the number of guessed cards
+    var consecutiveIncorrectGuesses: Int = 0 // Track consecutive incorrect guesses
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        randomCard()
+    }
+
+    @IBAction func buttonHighTouch(_ sender: UIButton) {
+        randomCard()
+        checkCards(number1: currentCardNumber, number2: previousCardNumber)
+        guessedCardCount += 1
+
+        // Check if the player has guessed at least 5 cards or lost
+        if guessedCardCount >= 5 {
+            handleGameOver()
+        }
+    }
+
+    @IBAction func buttonLowTouch(_ sender: UIButton) {
+        randomCard()
+        checkCards(number1: previousCardNumber, number2: currentCardNumber)
+        guessedCardCount += 1
+
+        // Check if the player has guessed at least 5 cards or lost
+        if guessedCardCount >= 5 {
+            handleGameOver()
+        }
+    }
+
+    private func updateScore() {
+        lblScore.text = "Score: \(score)"
+    }
+
+    private func checkCards(number1: Int, number2: Int) {
+        if number1 > number2 {
+            score += 1
+            consecutiveIncorrectGuesses = 0 // Reset consecutive incorrect guesses
+        } else {
+            score -= 1
+            consecutiveIncorrectGuesses += 1 // Increment consecutive incorrect guesses
+        }
+        updateScore()
+    }
+
+    private func randomCard() {
+        previousCardNumber = currentCardNumber
+        let suitNumber = Int.random(in: 1...4)
+        let cardNumber = Int.random(in: 1...13)
+        currentCardNumber = cardNumber
+        let cardString = "card_\(suitNumber)_\(cardNumber)"
+        if let _ = imgCard{
+            imgCard.image = UIImage(named: cardString)
+        }
+    }
+
+    // Step 3: Handle Game Over
+    private func handleGameOver() {
+        if score == 5 {
+            // Player wins if score reaches 5
+            performSegue(withIdentifier: "winningSegue", sender: self)
+        } else if consecutiveIncorrectGuesses >= 3 {
+            // Player loses if they have 3 consecutive incorrect guesses
+            performSegue(withIdentifier: "losingSegue", sender: self)
+        }
+    }
+
+    // Step 4: Pass data to the WinningViewController (optional)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "winningSegue" {
+            if let winningViewController = segue.destination as? WinningViewController {
+                // Pass data to the WinningViewController if needed (e.g., player's score)
+                winningViewController.winningScore = score
+            }
+        }
+    }
+}
+
+
